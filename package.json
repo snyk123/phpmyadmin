@@ -34,7 +34,8 @@
     "tracekit": "0.4.5",
     "u2f-api-polyfill": "0.4.4",
     "updated-jqplot": "1.0.9",
-    "zxcvbn": "4.4.2"
+    "zxcvbn": "4.4.2",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "@babel/cli": "^7.11.5",
@@ -57,6 +58,9 @@
     "css-compile": "sass themes/pmahomme/scss:themes/pmahomme/css themes/original/scss:themes/original/css themes/metro/scss:themes/metro/css themes/bootstrap/scss:themes/bootstrap/css",
     "css-lint": "stylelint --syntax scss \"themes/**/scss/*.scss\"",
     "js-lint": "eslint js/src",
-    "js-compile": "babel js/src -d js/dist"
-  }
+    "js-compile": "babel js/src -d js/dist",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
